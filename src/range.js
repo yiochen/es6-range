@@ -15,17 +15,16 @@ class IntRange {
       this.start = _value1;
       this.end = _value2;
     }
+
+    this.step = step;
   }
-  *gen() {
+
+  *[Symbol.iterator]() {
     let current = this.start;
-    console.log("iterating, current is " + current + " end is " + this.end);
     while (current < this.end) {
       yield current;
       current += this.step;
     }
-  }
-  [Symbol.iterator]() {
-    return this.gen();
   }
 }
 
