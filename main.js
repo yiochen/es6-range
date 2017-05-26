@@ -1,5 +1,3 @@
-require("babel-polyfill");
-
 var range = require("./src/range");
 
 console.log([...range(2, 5)]);
