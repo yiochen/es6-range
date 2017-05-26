@@ -2,7 +2,7 @@
   "name": "es6-range",
   "version": "0.0.0",
   "description": "A Python like range function in JavaScript\"",
-  "main": "index.js",
+  "main": "./src/range.js",
   "scripts": {
     "dev": "./node_modules/babel-cli/bin/babel-node.js --presets node6 ./main.js",
     "test": "jasmine"
