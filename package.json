@@ -1,0 +1,20 @@
+{
+  "name": "range",
+  "version": "0.0.0",
+  "description": "A Python like range function in JavaScript\"",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/babel-cli/bin/babel-node.js --presets node6 ./main.js",
+    "test": "jasmine"
+  },
+  "author": "Yiou Chen",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-node6": "^11.0.0",
+    "jasmine": "^2.6.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0"
+  }
+}
