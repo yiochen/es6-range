@@ -21,8 +21,7 @@ class IntRange {
 
   *[Symbol.iterator]() {
     let current = this.start;
-    let hasNext = () =>
-      this.start < this.end ? current < this.end : current > this.end;
+    let hasNext = () => (this.end - current) * this.step > 0;
     while (hasNext()) {
       yield current;
       current += this.step;
