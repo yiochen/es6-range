@@ -4,8 +4,11 @@ class IntRange {
     let _value2 = Number(value2);
 
     if (isNaN(_value1)) {
-      console.error("The first number is NaN");
-      return;
+      throw new TypeError("expect first argument as a number, got " + value1);
+    }
+
+    if (step === 0) {
+      throw new RangeError("range() step argument must not be zero");
     }
 
     if (isNaN(_value2)) {

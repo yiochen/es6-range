@@ -48,4 +48,16 @@ describe("work with one, two and three arguments", function() {
   it("single negative number returns nothing", function() {
     expect(arrayEqual([...range(-2)], [])).toBe(true);
   });
+
+  it("two arguments, if n > m, range(n, m) returns nothing", function() {
+    expect(arrayEqual([...range(10, -1)], [])).toBe(true);
+  });
+
+  it("if step is 0, should error out", function() {
+    expect(() => range(1, 10, 0)).toThrowError();
+  });
+
+  it("if no argument is provided, should throw error", function() {
+    expect(() => range()).toThrowError();
+  });
 });
